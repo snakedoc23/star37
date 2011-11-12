@@ -1,0 +1,29 @@
+.container_top
+  %header.top
+    .logo
+      = link_to 'star37', root_path
+    .add_link
+      = form_for @link do |f|
+        = f.text_field :content
+        = f.submit 'Add', :class => 'btn'
+    .menu
+      .search
+        = form_tag 'search_links'
+        = search_field_tag :search, nil, :placeholder => 'search'
+      .nav
+        %nav
+          %ul
+            %li
+              = link_to '1', '#'
+            %li
+              = link_to '2', '#'
+            %li
+              = link_to '3', '#'
+            %li
+              = link_to '4', '#'
+
+.content
+  .links_list
+    - @links.each do |link|
+      .link
+        = link.content

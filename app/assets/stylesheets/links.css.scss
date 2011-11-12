@@ -1,0 +1,111 @@
+// Place all the styles related to the links controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "compass/reset";
+@import "compass/css3";
+
+$light: #2d3844;
+$dark: #1c232b;
+$grey: #666;
+$l_grey: #e0e0e0;
+
+body {
+	font: 14px/1.4em "Helvetica Neue";
+	color: $grey;
+}
+.btn {
+	border: 1px solid #212326;
+	padding: 6px;
+	color: white;
+	font-size: 13px;
+	width: 90px;
+	cursor: pointer;
+	@include background-image(linear-gradient(top, $dark, $light));
+	&:hover {
+		@include background-image(linear-gradient(top, lighten($dark, 10%), lighten($light, 10%)));
+		border-color: $light;
+	}
+}
+input[type="text"], input[type="search"] {
+	border: 1px solid $l_grey;
+	padding: 6px;
+	color: $dark;
+	font-size: 13px;
+}
+::-webkit-input-placeholder {
+  color: $l_grey;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $l_grey;
+}
+ 
+
+.container_top {
+
+	border-bottom: 1px solid $l_grey;
+	margin-bottom: 30px;
+	.top {
+		height: 100px;
+		width: 900px;
+		margin: 10px auto;
+		.logo {
+			width: 82px;
+			height: 86px;
+			float: left;
+			margin-right: 50px;
+			a {
+				width: 82px;
+				height: 86px;
+				text-indent: -999px;
+				display: block;
+				background: url(logo.png);
+				&:hover {
+					background: url(logo_hover.png);
+				}
+			}
+		}
+		.add_link {
+			width: 440px;
+			height: 86px;
+			float: left;
+			vertical-align: bottom;
+			padding-top: 56px;
+			#link_content {
+				width: 320px;
+				margin-right: 10px;
+				float: left;
+				padding: 7px;
+			}
+		}
+		.menu {
+			width: 200px;
+			float: right;
+			height: 86px;
+			.search {
+				height: 56px;
+				input[type="search"] {
+					background: url(search_icon.png) no-repeat bottom right;
+					padding: 5px;
+				}
+			}
+			.nav {
+				ul {
+					li {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+}
+.content {
+	clear: both;
+	width: 900px;
+	margin: 0 auto;
+	.links_list {
+		margin-left: 132px;
+	}
+}
