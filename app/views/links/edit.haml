@@ -1,0 +1,5 @@
+.edit_link_container
+  = form_for @link do |f|
+    = f.text_field :content
+    = f.submit 'Edit', :class => 'btn'
+  = link_to 'back', links_path

@@ -8,22 +8,22 @@
         = f.submit 'Add', :class => 'btn'
     .menu
       .search
-        = form_tag 'search_links'
-        = search_field_tag :search, nil, :placeholder => 'search'
+        = form_tag links_path, :method => :get
+        = search_field_tag :search, params[:search], :placeholder => 'search'
       .nav
         %nav
           %ul
             %li
-              = link_to '1', '#'
+              = link_to 'p', root_path, :class => 'nav_btn'
             %li
-              = link_to '2', '#'
+              = link_to 'C', '#', :class => 'nav_btn'
             %li
-              = link_to '3', '#'
+              = link_to 'r', '#', :class => 'nav_btn'
             %li
-              = link_to '4', '#'
+              = link_to 'U', '#', :class => 'nav_btn'
 
 .content
   .links_list
     - @links.each do |link|
-      .link
-        = link.content
+      = render 'link', :link => link
+

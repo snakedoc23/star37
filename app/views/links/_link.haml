@@ -1,0 +1,10 @@
+.link
+  .link_content
+    = link_to link.content, link.content
+  .link_meta
+    .link_date
+      = link.created_at.strftime("%m/%d")
+    .link_actions
+      = link_to '.', '#'
+      = link_to '\'', link, :method => :delete, :confirm => "Czy aby na pewno"
+      = link_to 'S', edit_link_path(link)
