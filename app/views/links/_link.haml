@@ -1,6 +1,9 @@
 .link
   .link_content
-    = link_to link.content, link.content
+    - if link.title
+      = link_to link.title, link.content
+    - else
+      = link_to link.content, link.content
   .link_meta
     .link_date
       = link.created_at.strftime("%m/%d")
