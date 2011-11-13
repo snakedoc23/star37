@@ -5,7 +5,7 @@ describe "Link" do
     link = Link.create!(:content => 'test link')
   end
   it 'content nie moze byc pusty' do
-    link = Link.new()
+    link = Link.new(:content => '')
     link.should_not be_valid
   end
 
