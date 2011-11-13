@@ -32,3 +32,15 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem 'rspec-rails', :group => [:test, :development]
+group :test do
+  gem 'capybara'
+  gem 'guard-rspec'
+  
+  # gem 'growl'
+  # gem 'rb-fsevent'
+  # gem 'growl_notify'
+
+  gem 'spork', '> 0.9.0.rc'
+  gem 'guard-spork'
+end

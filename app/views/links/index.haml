@@ -10,6 +10,7 @@
       .search
         = form_tag links_path, :method => :get
         = search_field_tag :search, params[:search], :placeholder => 'search'
+        = submit_tag :search, :id => 'search_btn'
       .nav
         %nav
           %ul
