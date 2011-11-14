@@ -52,11 +52,12 @@ a {
     border-color: $light;
   }
 }
-input[type="text"], input[type="search"] {
+input[type="text"], input[type="password"], input[type="search"] {
   border: 1px solid $l_grey;
   padding: 6px;
   color: $dark;
   font-size: 13px;
+  outline: none;
   &:focus {
     border-color: $pink;
   }
@@ -144,9 +145,10 @@ textarea:-moz-placeholder {
       height: 86px;
       .search {
         height: 56px;
-        input[type="search"] {
+        input[type="text"] {
           background: url(search_icon.png) no-repeat bottom right;
           padding: 5px;
+          width: 177px;
         }
         #search_btn {
           display: none;

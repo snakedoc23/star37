@@ -9,7 +9,7 @@
     .menu
       .search
         = form_tag links_path, :method => :get
-        = search_field_tag :search, params[:search], :placeholder => 'search'
+        = text_field_tag :search, params[:search], :placeholder => 'search'
         = submit_tag :search, :id => 'search_btn'
       .nav
         %nav
@@ -21,7 +21,7 @@
             %li
               = link_to 'r', '#', :class => 'nav_btn'
             %li
-              = link_to 'U', '#', :class => 'nav_btn'
+              = link_to 'U', signup_path, :class => 'nav_btn', :title => 'signup'
 
 .content
   .links_list

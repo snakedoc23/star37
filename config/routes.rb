@@ -1,5 +1,9 @@
 Star37::Application.routes.draw do
+  
+  get 'signup' => 'users#new'
+
   resources :links
+  resources :users
   root :to => 'links#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
