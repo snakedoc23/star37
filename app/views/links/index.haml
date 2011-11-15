@@ -1,4 +1,9 @@
 .container_top
+  #log_in_link
+    - if current_user
+      = link_to "Log out ( #{current_user.email} )", log_out_path
+    - else
+      = link_to 'Login', log_in_path
   %header.top
     .logo
       = link_to 'star37', root_path
@@ -8,9 +13,9 @@
         = f.submit 'Add', :class => 'btn'
     .menu
       .search
-        = form_tag links_path, :method => :get
-        = text_field_tag :search, params[:search], :placeholder => 'search'
-        = submit_tag :search, :id => 'search_btn'
+        = form_tag links_path, :method => :get do
+          = text_field_tag :search, params[:search], :placeholder => 'search'
+          = submit_tag :search, :id => 'search_btn'
       .nav
         %nav
           %ul
@@ -21,7 +26,7 @@
             %li
               = link_to 'r', '#', :class => 'nav_btn'
             %li
-              = link_to 'U', signup_path, :class => 'nav_btn', :title => 'signup'
+              = link_to 'U', log_in_path, :class => 'nav_btn', :title => 'login'
 
 .content
   .links_list

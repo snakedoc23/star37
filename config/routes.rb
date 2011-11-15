@@ -1,9 +1,12 @@
 Star37::Application.routes.draw do
   
   get 'signup' => 'users#new'
+  get 'log_in' => 'sessions#new'
+  get 'log_out' => 'sessions#destroy'
 
   resources :links
   resources :users
+  resources :sessions
   root :to => 'links#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

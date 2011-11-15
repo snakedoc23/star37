@@ -37,7 +37,6 @@ class LinksController < ApplicationController
     Link.find(params[:id]).destroy
     flash[:success] = "Link deleted"
     redirect_to links_path
-    
   end
 
 end

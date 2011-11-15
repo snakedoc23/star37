@@ -72,6 +72,26 @@ textarea:-moz-placeholder {
 }
 
 
+
+#log_in_link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  // background: white;
+  height: 24px;
+  a {
+    color: $dark;
+    padding: 11px;
+    &:hover {
+      color: $pink;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
 // FLASH
 .flash {
   text-align: center;
@@ -144,7 +164,8 @@ textarea:-moz-placeholder {
       float: right;
       height: 86px;
       .search {
-        height: 56px;
+        height: 36px;
+        margin-top: 20px;
         input[type="text"] {
           background: url(search_icon.png) no-repeat bottom right;
           padding: 5px;
